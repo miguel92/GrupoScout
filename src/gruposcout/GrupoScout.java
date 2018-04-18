@@ -5,6 +5,10 @@
  */
 package gruposcout;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 /**
  *
  * @author miguel_martin
@@ -16,6 +20,11 @@ public class GrupoScout {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("GrupoScoutPU");
+        EntityManager em = emf.createEntityManager();
+        
+        em.close();
+        emf.close();
     }
     
 }
