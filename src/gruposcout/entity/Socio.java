@@ -82,7 +82,7 @@ public class Socio extends Usuario implements Serializable{
     @OneToMany(mappedBy="socio")
     private List <Notificacion_Evento> notificacionEvento;
 //--
-    @OneToMany(mappedBy="EntradaCalendario")
+    @OneToMany(mappedBy="socio")
     private List <Entrada_Calendario> entradaCalendarios;
     @OneToMany(mappedBy="socio")
     private List <Documento> documentos;

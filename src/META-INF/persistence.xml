@@ -5,6 +5,20 @@
     <class>gruposcout.entity.Campos</class>
     <class>gruposcout.entity.Documento</class>
     <class>gruposcout.entity.Documento_Plantilla</class>
+    <class>gruposcout.entity.Comentario</class>
+    <class>gruposcout.entity.Cuota</class>
+    <class>gruposcout.entity.Entrada_Calendario</class>
+    <class>gruposcout.entity.Evento</class>
+    <class>gruposcout.entity.Linea_Presupuesto_Evento</class>
+    <class>gruposcout.entity.Notificacion_Documento</class>
+    <class>gruposcout.entity.Notificacion_Evento</class>
+    <class>gruposcout.entity.Pago_Cuota</class>
+    <class>gruposcout.entity.Pago_Evento</class>
+    <class>gruposcout.entity.Presupuesto_Evento</class>
+    <class>gruposcout.entity.Seccion</class>
+    <class>gruposcout.entity.Socio</class>
+    <class>gruposcout.entity.Transaccion</class>
+    <class>gruposcout.entity.Usuario</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>
       <property name="javax.persistence.jdbc.user" value="app"/>

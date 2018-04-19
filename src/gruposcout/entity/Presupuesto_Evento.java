@@ -33,7 +33,7 @@ public class Presupuesto_Evento implements Serializable {
     private Date fecha;
     @Column(name="importe_total",nullable=false)
     private Integer importe_total;
-    /*@ManyToOne
+    @ManyToOne
     private Evento evento;
 
     public void setEvento(Evento evento) {
@@ -42,7 +42,7 @@ public class Presupuesto_Evento implements Serializable {
 
     public Evento getEvento() {
         return evento;
-    }*/
+    }
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
