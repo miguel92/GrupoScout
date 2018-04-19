@@ -30,9 +30,9 @@ public class Comentario implements Serializable {
     @Column (length = 255, nullable=false)
     private String Texto;
     @ManyToOne
-    private Long socio = Socio.getId();
+    private Socio socio;
     @ManyToOne
-    private Long evento = Evento.getId();
+    private Evento evento;
 
     public Comentario_Id getId() {
         return id;

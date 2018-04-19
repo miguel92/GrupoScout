@@ -38,7 +38,7 @@ public class Entrada_Calendario implements Serializable {
     @Column (name="Categoría", length = 50,nullable=false)
     private String categoria;
     @ManyToOne
-    private Long socio = Socio.getId();
+    private Socio socio;
     
     
     public Entrada_Calendario_Id getId() {
