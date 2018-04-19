@@ -18,6 +18,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 
@@ -29,9 +31,12 @@ import javax.persistence.ManyToOne;
 @Access (AccessType.FIELD)
 public class Entrada_Calendario implements Serializable {
     
-    @EmbeddedId @GeneratedValue
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column (name = "ID",length = 30, nullable=false)
-    private Entrada_Calendario_Id id;
+    private Long id;
+    @Temporal (TemporalType.DATE)
+    private Date fecha;
     @Column (name = "Descripción", length = 200, nullable=false)
     private String descripcion;
     // Falta tamaño en el modelo lógico
@@ -41,7 +46,7 @@ public class Entrada_Calendario implements Serializable {
     private Socio socio;
     
     
-    public Entrada_Calendario_Id getId() {
+    public Long getId() {
         return id;
     }
     
@@ -55,7 +60,7 @@ public class Entrada_Calendario implements Serializable {
         return categoria;
     }
 
-    public void setId(Entrada_Calendario_Id id) {
+    public void setId(Long id) {
         this.id = id;
     }
     

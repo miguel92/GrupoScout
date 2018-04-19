@@ -25,17 +25,19 @@ import javax.persistence.ManyToOne;
 @Access (AccessType.FIELD)
 public class Notificacion_Documento implements Serializable {
 
-    @EmbeddedId @GeneratedValue
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="ID",length=30, nullable=false)
-    private Notificacion_Documento_Id id;
+    private Long id;
     @Column(name="Estado", length=10,nullable=false)
     private String estado;
     @ManyToOne
     private Socio socio;
     @ManyToOne
     private Documento documento;
-
-    public Notificacion_Documento_Id getId() {
+    
+    
+    public Long getId() {
         return id;
     }
     
@@ -43,7 +45,7 @@ public class Notificacion_Documento implements Serializable {
         return estado;
     }
 
-    public void setId(Notificacion_Documento_Id id) {
+    public void setId(Long id) {
         this.id = id;
     }
     

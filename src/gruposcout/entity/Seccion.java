@@ -43,9 +43,7 @@ public class Seccion implements Serializable {
     private List<Socio> socios;
 
     //Constructor
-    public Seccion() {
-        
-    }
+    
 
     //Getters
     public Long getId_seccion() {

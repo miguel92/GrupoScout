@@ -7,6 +7,7 @@ package gruposcout.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Column;
@@ -15,6 +16,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
@@ -24,9 +27,12 @@ import javax.persistence.ManyToOne;
 @Access (AccessType.FIELD)
 public class Comentario implements Serializable {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column (name = "ID",length =30, nullable=false)
-    private Comentario_Id id;
+    private Long id;
+    @Temporal(TemporalType.DATE)
+    private Date fecha;
     @Column (length = 255, nullable=false)
     private String Texto;
     @ManyToOne
@@ -34,45 +40,75 @@ public class Comentario implements Serializable {
     @ManyToOne
     private Evento evento;
 
-    public Comentario_Id getId() {
-        return id;
-    }
-    
-    public String getTexto(){
-        return Texto;
-    }
-
-    public void setId(Comentario_Id id) {
-        this.id = id;
-    }
-    
-    public void setTexto(String Texto){
-        this.Texto=Texto;
-    }
-
     @Override
     public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        int hash = 7;
+        hash = 59 * hash + Objects.hashCode(this.id);
         return hash;
     }
 
     @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Comentario)) {
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
             return false;
         }
-        Comentario other = (Comentario) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Comentario other = (Comentario) obj;
+        if (!Objects.equals(this.id, other.id)) {
             return false;
         }
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "entrega1_scouts.Comentario[ id=" + id + " ]";
+    public Long getId() {
+        return id;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+    
+    public Socio getSocio() {
+        return socio;
+    }
+
+    public void setSocio(Socio socio) {
+        this.socio = socio;
+    }
+
+    public Evento getEvento() {
+        return evento;
+    }
+
+    public void setEvento(Evento evento) {
+        this.evento = evento;
+    }
+   
+
+ 
+    
+    public String getTexto(){
+        return Texto;
+    }
+
+    
+    public void setTexto(String Texto){
+        this.Texto=Texto;
+    }
+
+    
     
 }

@@ -69,10 +69,7 @@ public class Evento implements Serializable {
     private List<Presupuesto_Evento> presupuestosEvento;
     
     
-    //Constructor
-    public Evento() {
-        
-    }
+    
     
     //Getters
 

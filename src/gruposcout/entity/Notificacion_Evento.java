@@ -43,10 +43,7 @@ public class Notificacion_Evento implements Serializable {
     private Evento evento;
     
     
-    //Constructor
-    public Notificacion_Evento() {
-        
-    }
+   
 
     //Getters
     public Long getId_not_evento() {
