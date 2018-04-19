@@ -31,9 +31,9 @@ public class Notificacion_Documento implements Serializable {
     @Column(name="Estado", length=10,nullable=false)
     private String estado;
     @ManyToOne
-    private Long socio = Socio.getId();
+    private Socio socio;
     @ManyToOne
-    private Long documento = Documento.getId();
+    private Documento documento;
 
     public Notificacion_Documento_Id getId() {
         return id;
