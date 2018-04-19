@@ -92,37 +92,36 @@ public class Socio extends Usuario implements Serializable{
     private List <Notificacion_Documento> notificacionDocumento;
     @OneToMany(mappedBy="socio")
     private List <Comentario> comentario;
-    
-    //--------------------
 
-    public <any> getTransacciones() {
+    public List<Transaccion> getTransacciones() {
         return transacciones;
     }
 
-    public void setTransacciones(<any> transacciones) {
+    public void setTransacciones(List<Transaccion> transacciones) {
         this.transacciones = transacciones;
     }
-    public <any> getPago_cuotas() {
+
+    public List<Pago_Cuota> getPago_cuotas() {
         return pago_cuotas;
     }
 
-    public void setPago_cuotas(<any> pago_cuotas) {
+    public void setPago_cuotas(List<Pago_Cuota> pago_cuotas) {
         this.pago_cuotas = pago_cuotas;
     }
 
-    public <any> getAsistentes() {
+    public List<Evento> getAsistentes() {
         return asistentes;
     }
 
-    public void setAsistentes(<any> asistentes) {
+    public void setAsistentes(List<Evento> asistentes) {
         this.asistentes = asistentes;
     }
 
-    public <any> getInscritos() {
+    public List<Evento> getInscritos() {
         return inscritos;
     }
 
-    public void setInscritos(<any> inscritos) {
+    public void setInscritos(List<Evento> inscritos) {
         this.inscritos = inscritos;
     }
 
@@ -134,55 +133,55 @@ public class Socio extends Usuario implements Serializable{
         this.seccion = seccion;
     }
 
-    public <any> getNotificacionEvento() {
+    public List<Notificacion_Evento> getNotificacionEvento() {
         return notificacionEvento;
     }
 
-    public void setNotificacionEvento(<any> notificacionEvento) {
+    public void setNotificacionEvento(List<Notificacion_Evento> notificacionEvento) {
         this.notificacionEvento = notificacionEvento;
     }
 
-    public <any> getEntradaCalendarios() {
+    public List<Entrada_Calendario> getEntradaCalendarios() {
         return entradaCalendarios;
     }
 
-    public void setEntradaCalendarios(<any> entradaCalendarios) {
+    public void setEntradaCalendarios(List<Entrada_Calendario> entradaCalendarios) {
         this.entradaCalendarios = entradaCalendarios;
     }
 
-    public <any> getDocumentos() {
+    public List<Documento> getDocumentos() {
         return documentos;
     }
 
-    public void setDocumentos(<any> documentos) {
+    public void setDocumentos(List<Documento> documentos) {
         this.documentos = documentos;
     }
 
-    public <any> getPago_eventos() {
+    public List<Pago_Evento> getPago_eventos() {
         return pago_eventos;
     }
 
-    public void setPago_eventos(<any> pago_eventos) {
+    public void setPago_eventos(List<Pago_Evento> pago_eventos) {
         this.pago_eventos = pago_eventos;
     }
 
-    public <any> getNotificacionDocumento() {
+    public List<Notificacion_Documento> getNotificacionDocumento() {
         return notificacionDocumento;
     }
 
-    public void setNotificacionDocumento(<any> notificacionDocumento) {
+    public void setNotificacionDocumento(List<Notificacion_Documento> notificacionDocumento) {
         this.notificacionDocumento = notificacionDocumento;
     }
 
-    public <any> getComentario() {
+    public List<Comentario> getComentario() {
         return comentario;
     }
 
-    public void setComentario(<any> comentario) {
+    public void setComentario(List<Comentario> comentario) {
         this.comentario = comentario;
     }
- 
-    //--------------------
+
+    
     public String getDni() {
         return dni;
     }
