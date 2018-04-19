@@ -60,7 +60,7 @@ public class Evento implements Serializable {
         inverseJoinColumns = @JoinColumn(name = "inscripcion_socio_fk"))
     private List<Socio> inscritos;
     @OneToMany(mappedBy = "evento")
-    private List<Notificacion_EventoId> notificacionesEvento;
+    private List<Notificacion_Evento> notificacionesEvento;
     @OneToMany(mappedBy = "evento")
     private List<Pago_Evento> pagosEvento;
     @OneToMany(mappedBy = "evento")
@@ -112,7 +112,7 @@ public class Evento implements Serializable {
         return inscritos;
     }
 
-    public List<Notificacion_EventoId> getNotificacionesEvento() {
+    public List<Notificacion_Evento> getNotificacionesEvento() {
         return notificacionesEvento;
     }
 
@@ -166,7 +166,7 @@ public class Evento implements Serializable {
         this.inscritos = inscritos;
     }
 
-    public void setNotificacionesEvento(List<Notificacion_EventoId> notificacionesEvento) {
+    public void setNotificacionesEvento(List<Notificacion_Evento> notificacionesEvento) {
         this.notificacionesEvento = notificacionesEvento;
     }
 
