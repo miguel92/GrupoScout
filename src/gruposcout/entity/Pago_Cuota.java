@@ -27,19 +27,22 @@ public class Pago_Cuota implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(length=30)
     private Long id;
     
-    @Column(nullable=false)
+    @Column(nullable=false,length=200)
     private Integer importe;
     
-    @Column(nullable=false)
+    @Column(nullable=false,length=10)
     @Temporal(TemporalType.DATE)
     private Date fecha;
     
     @ManyToOne
+    @Column(length=30)
     private Cuota cuota;
     
     @ManyToOne
+    @Column(length=30)
     private Socio socio;
     
      public Cuota getCuota() {

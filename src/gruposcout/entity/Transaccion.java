@@ -26,20 +26,22 @@ public class Transaccion implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(length=30)
     private Long id;
     
-    @Column(nullable=false)
+    @Column(nullable=false, length=50)
     private String concepto;
     
-    @Column(nullable=false)
+    @Column(nullable=false, length=10)
     @Temporal(TemporalType.DATE)
     private Date fecha;
     
-    @Column(nullable=false)
+    @Column(nullable=false, length=10)
     private Integer importe;
     
     
     @ManyToOne
+    @Column(length=30)
     private Socio socio;
 
     public Socio getSocio() {

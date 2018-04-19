@@ -24,18 +24,20 @@ public class Cuota implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(length=30)
     private Long id;
     
-    @Column(nullable=false)
+    @Column(nullable=false,length=10)
     private Integer importe;
     
-    @Column(nullable=false)
+    @Column(nullable=false,length=50)
     private String nombre;
     
-    @Column(nullable=false)
+    @Column(nullable=false,length=200)
     private String descripcion;
     
     @OneToMany(mappedBy="cuota")
+    @Column(length=30)
     private List<Pago_Cuota> pago_cuotas;
     
     
