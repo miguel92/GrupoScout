@@ -24,9 +24,9 @@ public class Pago_Evento implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(nullable = false)
+    @Column(name = "importe", nullable = false, length=30)
     private Integer importe;
-    @Column(nullable = false)
+    @Column(name = "categoria", nullable = false, length=30)
     private String categoria;
     @ManyToOne
     private Socio socio;

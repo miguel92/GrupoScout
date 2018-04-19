@@ -30,34 +30,34 @@ public class Socio extends Usuario implements Serializable{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String dni;
-    @Column(nullable = false)
+    @Column(name = "nombre", nullable = false, length=30)
     private String nombre;
-    @Column(nullable = false)
+    @Column(name = "apellidos", nullable = false, length=30)
     private String apellidos;
     private String grupo;
     @Temporal(TemporalType.DATE)
-    @Column(nullable = false)
+    @Column(name = "fecha_nacimiento", nullable = false)
     private Date fecha_nacimiento;
-    @Column(nullable = false)
+    @Column(name = "sexo", nullable = false)
     private boolean sexo;
-    @Column(nullable = false)
+    @Column(name = "direccion", nullable = false, length=30)
     private String direccion;
-    @Column(nullable = false)
+    @Column(name = "telefono", nullable = false, length=10)
     private Integer telefono;
-    @Column(nullable = false)
+    @Column(name = "telefono_movil", nullable = false, length=10)
     private Integer telefono_movil;
     @Temporal(TemporalType.DATE)
-    @Column(nullable = false)
+    @Column(name = "fecha_ingreso", nullable = false)
     private Date fecha_ingreso;
     @Temporal(TemporalType.DATE)
-    @Column(nullable = false)
+    @Column(name = "fecha_baja", nullable = false)
     private Date fecha_baja;
     private String cargo;
     private String ambito;
     private String info_tutores;
     @Temporal(TemporalType.DATE)
     private Date fecha_firma;
-    @Column(nullable = false)
+    @Column(name = "localizacion", nullable = false)
     private String localizacion;
     private String perfil;
 
