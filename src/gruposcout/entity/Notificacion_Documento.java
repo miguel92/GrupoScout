@@ -51,6 +51,23 @@ public class Notificacion_Documento implements Serializable {
         this.estado=estado;
     }
 
+    public Socio getSocio() {
+        return socio;
+    }
+
+    public void setSocio(Socio socio) {
+        this.socio = socio;
+    }
+
+    public Documento getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(Documento documento) {
+        this.documento = documento;
+    }
+
+    
     @Override
     public int hashCode() {
         int hash = 0;
