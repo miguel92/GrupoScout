@@ -41,6 +41,8 @@ public class Documento implements Serializable {
     private EstadoDoc estado;
     @ManyToOne
     private Documento_Plantilla doc_plantilla;
+    @ManyToOne
+    private Socio socio;
     
     public Long getId() {
         return id_documento;
@@ -96,6 +98,14 @@ public class Documento implements Serializable {
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
+    }
+
+    public Socio getSocio() {
+        return socio;
+    }
+
+    public void setSocio(Socio socio) {
+        this.socio = socio;
     }
 
     
